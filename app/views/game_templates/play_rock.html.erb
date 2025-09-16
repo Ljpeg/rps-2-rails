@@ -1,0 +1,18 @@
+ <!--similar to sinatra file -->
+ <!--use erb tags and ruby states -->
+ <!--e.g. <%#= rand(19) %>-->
+
+<h2>We played rock!</h2>
+
+<h2>They played <%= @them %>!</h2>
+
+<% if @them == 'rock'%>
+<h2> We tied! </h2>
+
+<% elsif @them == 'scissors'%>
+<h2> We won! </h2>
+
+<% else %>
+<h2> We lost! </h2>
+
+<% end %>

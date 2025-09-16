@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # class is defined in app/controllers folder , method defined in class
   # controller folder and class needs to match the name 
 
-  get("/rock" { :contoller => "", :action => ""})
+  get("/rock", { :controller => "rps", :action => "rock"})
+  
 end
