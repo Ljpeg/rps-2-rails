@@ -18,8 +18,12 @@ class RpsController < ApplicationController
     render({:template => "game_templates/play_paper"})
   end
 
-  def scissor
-    # pass
+  def scissors
+    @them = RPS.sample
+
+    render({:template => "game_templates/play_scissors"})
   end 
 
+  def rules
+    render({:template => "game_templates/rules"})
 end 
