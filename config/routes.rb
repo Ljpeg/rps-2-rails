@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # controller folder and class needs to match the name 
 
   get("/rock", { :controller => "rps", :action => "rock"})
+
+  get("/paper", { :controller => "rps", :action => "paper"})
   
 end

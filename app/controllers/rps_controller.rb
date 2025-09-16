@@ -13,7 +13,9 @@ class RpsController < ApplicationController
   end 
 
   def paper
-    # pass
+    @them = RPS.sample
+
+    render({:template => "game_templates/play_paper"})
   end
 
   def scissor
