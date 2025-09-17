@@ -1,0 +1,30 @@
+
+<a href="/rock"> Play Rock</a>
+<a href="/paper"> Play Paper</a>
+<a href="/scissors"> Play Scissors</a>
+
+<h2>We played <%= @move %></h2>
+
+
+<% if @rps.include?(@move) %>
+
+  <h2>They played <%= @them %>!</h2>
+
+  <% if @them == @move %>
+  <h2> We tied! </h2>
+
+  <% elsif (@them == 'scissors' && @move == 'rock') || 
+  (@them == 'rock' && @move == 'paper') ||
+  (@them == 'paper' && @move == 'scissors') %>
+  <h2> We won! </h2>
+
+  <% else %>
+  <h2> We lost! </h2>
+
+  <% end %>
+
+<% else %>
+<h2> Choose rock paper or scissors to play the game</h2>
+<% end %>
+
+<a href="/"> Rules</a>
